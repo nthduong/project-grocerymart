@@ -1,24 +1,49 @@
-.header {
-    background: #eee;
-}
+@use "../abstracts";
 
-.top-bar {
+%flex-align-center {
     display: flex;
     align-items: center;
 }
 
+.header {
+    background: var(--header-bg-color);
+}
+
+.top-bar {
+    padding: 30px 0;
+    @extend %flex-align-center;
+
+    @include abstracts.breakpoint(lg) {
+        padding: 20px 0;
+    }
+    @include abstracts.breakpoint(sm) {
+        padding: 16px 0;
+    }
+    &__more {
+        display: none;
+        @include abstracts.breakpoint(lg) {
+            display: block;
+            margin-top: 3px;
+        }
+    }
+}
+
 .navbar {
     margin-left: 144px;
-    margin-right: auto;
+
+    @include abstracts.breakpoint(xl) {
+        margin-left: 40px;
+    }
+    @include abstracts.breakpoint(lg) {
+        display: none;
+    }
 
     &__list {
-        display: flex;
-        align-items: center;
+        @extend %flex-align-center;
         gap: 30px;
     }
     &__link {
-        display: flex;
-        align-items: center;
+        @extend %flex-align-center;
         gap: 6px;
         font-size: 1.5rem;
         font-weight: 500;
@@ -30,28 +55,34 @@
 }
 
 .top-act {
-    display: flex;
-    align-items: center;
+    margin-left: auto;
+    @extend %flex-align-center;
     gap: 20px;
 
     &__group {
-        display: flex;
-        align-content: center;
-        justify-content: center;
+        @include abstracts.breakpoint(md) {
+            display: none;
+        }
 
+        @extend %flex-align-center;
         min-width: 50px;
         height: 50px;
 
         border-radius: 8px;
-        background: var(--Secondary-Color-Background, #fff);
-        box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+        background: var(--top-act-group-bg-color);
+        box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
     }
 
     &__btn {
         padding: 13px;
-        display: flex;
-        align-items: center;
+        @extend %flex-align-center;
         gap: 10px;
+    }
+
+    &__group--single {
+        @include abstracts.breakpoint(lg) {
+            display: none;
+        }
     }
 
     &__group--double &__btn {
@@ -62,7 +93,7 @@
         margin: auto 0;
         width: 1px;
         height: 30px;
-        background: #ededf6;
+        background: var(--top-act-group-separate);
     }
 
     &__title {
@@ -70,14 +101,17 @@
         font-weight: 500;
         line-height: 146.667%; /* 146.667% */
     }
+
+    &__icon {
+        padding: 2px;
+    }
     &__avatar {
+        display: block;
         object-fit: cover;
+        cursor: pointer;
         width: 50px;
         height: 50px;
         border-radius: 8px;
-        background: url(<path-to-image>) lightgray -205.145px -22.64px /
-                819.939% 546.626% no-repeat,
-            #dfd2fa;
-        box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
+        box-shadow: 0px 4px 14px 2px var(--top-act-shadow-avatar);
     }
 }
