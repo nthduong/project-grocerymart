@@ -18,6 +18,7 @@
     }
     @include abstracts.breakpoint(sm) {
         padding: 16px 0;
+        justify-content: space-between;
     }
     &__more {
         display: none;
@@ -58,6 +59,10 @@
     margin-left: auto;
     @extend %flex-align-center;
     gap: 20px;
+
+    @include abstracts.breakpoint(sm) {
+        margin-left: initial;
+    }
 
     &__group {
         @include abstracts.breakpoint(md) {

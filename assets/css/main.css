@@ -147,6 +147,7 @@ body {
   font-size: 1.6rem;
   font-family: Gordita, sans-serif;
   color: var(--text-color);
+  background: var(--body-bg-color);
 }
 
 a {
@@ -1224,6 +1225,7 @@ select {
 @media (max-width: 575.98px) {
   .top-bar {
     padding: 16px 0;
+    justify-content: space-between;
   }
 }
 .top-bar__more {
@@ -1265,6 +1267,11 @@ select {
 .top-act {
   margin-left: auto;
   gap: 20px;
+}
+@media (max-width: 575.98px) {
+  .top-act {
+    margin-left: initial;
+  }
 }
 .top-act__group {
   min-width: 50px;
@@ -1325,6 +1332,11 @@ select {
     margin-left: 39px;
   }
 }
+@media (max-width: 575.98px) {
+  .logo {
+    margin-left: initial;
+  }
+}
 .logo__title {
   margin-bottom: 4px;
   font-size: 2.2rem;
@@ -1347,6 +1359,7 @@ html.dark {
   --text-color: #fff;
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%)
       saturate(7489%) hue-rotate(188deg) brightness(100%) contrast(103%);
+  --body-bg-color: #292e39;
   --header-bg-color: #171c28;
   --top-act-group-bg-color: #292e39;
   --top-act-group-shadow: rgba(0, 0, 0, 0.2);
@@ -1358,11 +1371,17 @@ html {
   --text-color: #1a162e;
   --icon-color: brightness(0) saturate(100%) invert(8%) sepia(10%)
       saturate(4320%) hue-rotate(213deg) brightness(94%) contrast(95%);
+  --body-bg-color: #f6f6f6;
   --header-bg-color: #eee;
   --top-act-group-bg-color: #fff;
   --top-act-group-shadow: rgba(237, 237, 246, 0.2);
   --top-act-shadow-avatar: rgba(0, 0, 0, 0.08);
   --top-act-group-separate: #ededf6;
+}
+@media (max-width: 991.98px) {
+  html {
+    --header-bg-color: #fff;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
