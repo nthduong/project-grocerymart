@@ -1213,16 +1213,22 @@ select {
 .header {
   background: var(--header-bg-color);
 }
+@media (max-width: 767.98px) {
+  .header {
+    box-shadow: 0px 20px 60px 10px var(--header-shadow);
+  }
+}
 
 .top-bar {
   padding: 30px 0;
+  position: relative;
 }
 @media (max-width: 991.98px) {
   .top-bar {
     padding: 20px 0;
   }
 }
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .top-bar {
     padding: 16px 0;
     justify-content: space-between;
@@ -1239,11 +1245,11 @@ select {
 }
 
 .navbar {
-  margin-left: 144px;
+  margin-left: 129px;
 }
 @media (max-width: 1199.98px) {
   .navbar {
-    margin-left: 40px;
+    margin-left: 29px;
   }
 }
 @media (max-width: 991.98px) {
@@ -1251,11 +1257,13 @@ select {
     display: none;
   }
 }
-.navbar__list {
-  gap: 30px;
+.navbar__item:hover .dropdown {
+  display: block;
 }
 .navbar__link {
   gap: 6px;
+  padding: 0 15px;
+  height: 50px;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 146.667%; /* 146.667% */
@@ -1268,7 +1276,7 @@ select {
   margin-left: auto;
   gap: 20px;
 }
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .top-act {
     margin-left: initial;
   }
@@ -1332,7 +1340,7 @@ select {
     margin-left: 39px;
   }
 }
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .logo {
     margin-left: initial;
   }
@@ -1355,6 +1363,81 @@ select {
   }
 }
 
+.dropdown {
+  position: absolute;
+  left: 0;
+  padding-top: 54px;
+  display: none;
+  width: min(1240px, 100%);
+}
+.dropdown__inner {
+  --padding-inner: 30px;
+  --max-height-dropdown: min(596px, 100vh - 150px);
+  position: relative;
+  max-height: var(--max-height-dropdown);
+  padding: var(--padding-inner);
+  border-radius: 20px;
+  background: var(--dropdown-bg-color);
+  box-shadow: 0px 40px 90px 20px var(--dropdown-shadow);
+}
+.dropdown__inner::before {
+  content: url("../icons/polygon.svg");
+  position: absolute;
+  top: -13px;
+  left: var(--arrow-left-pos);
+  translate: -50%;
+  filter: var(--dropdown-arrow-color);
+}
+
+.top-menu__main {
+  height: calc(var(--max-height-dropdown) - var(--padding-inner) * 2);
+  width: 292px;
+  border-right: 1px solid var(--top-menu-main-border-color);
+  overflow-y: auto;
+}
+
+.menu-column {
+  display: flex;
+  gap: 14px;
+}
+.menu-column__icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+}
+.menu-column__icon-2 {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  filter: var(--menu-column-icon-color);
+  object-fit: cover;
+}
+.menu-column__heading {
+  margin-top: 5px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%; /* 150% */
+}
+.menu-column__content {
+  flex: 1;
+}
+.menu-column__list {
+  margin-top: 19px;
+}
+.menu-column__link {
+  display: block;
+  padding: 7px 0;
+  font-size: 1.4rem;
+  line-height: 142.857%; /* 142.857% */
+}
+.menu-column__link:hover {
+  color: #0071dc;
+  font-weight: 500;
+}
+
 html.dark {
   --text-color: #fff;
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%)
@@ -1365,6 +1448,19 @@ html.dark {
   --top-act-group-shadow: rgba(0, 0, 0, 0.2);
   --top-act-shadow-avatar: rgba(0, 0, 0, 0.08);
   --top-act-group-separate: #ededf6;
+  --dropdown-bg-color: #333a48;
+  --dropdown-shadow: rgba(23, 28, 40, 0.4);
+  --dropdown-arrow-color: brightness(0) saturate(100%) invert(17%) sepia(9%)
+      saturate(1714%) hue-rotate(182deg) brightness(91%) contrast(81%);
+  --top-menu-main-border-color: #171c28;
+  --menu-column-icon-color: brightness(0) saturate(100%) invert(100%)
+      sepia(100%) saturate(0%) hue-rotate(306deg) brightness(103%)
+      contrast(101%);
+}
+@media (max-width: 991.98px) {
+  html.dark {
+    --header-shadow: rgba(0, 0, 0, 0.2);
+  }
 }
 
 html {
@@ -1377,10 +1473,16 @@ html {
   --top-act-group-shadow: rgba(237, 237, 246, 0.2);
   --top-act-shadow-avatar: rgba(0, 0, 0, 0.08);
   --top-act-group-separate: #ededf6;
+  --dropdown-bg-color: #fff;
+  --dropdown-shadow: rgba(200, 200, 200, 0.4);
+  --top-menu-main-border-color: #d2d1d6;
+  --menu-column-icon-color: brightness(0) saturate(100%) invert(9%) sepia(22%)
+      saturate(1558%) hue-rotate(210deg) brightness(93%) contrast(97%);
 }
 @media (max-width: 991.98px) {
   html {
     --header-bg-color: #fff;
+    --header-shadow: rgba(237, 237, 246, 0.2);
   }
 }
 
