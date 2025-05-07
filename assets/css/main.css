@@ -1367,14 +1367,11 @@ select {
   position: absolute;
   left: 0;
   padding-top: 54px;
-  display: none;
   width: min(1240px, 100%);
 }
 .dropdown__inner {
   --padding-inner: 30px;
-  --max-height-dropdown: min(596px, 100vh - 150px);
   position: relative;
-  max-height: var(--max-height-dropdown);
   padding: var(--padding-inner);
   border-radius: 20px;
   background: var(--dropdown-bg-color);
@@ -1389,9 +1386,13 @@ select {
   filter: var(--dropdown-arrow-color);
 }
 
+.top-menu {
+  --with-main-menu: 292px;
+  position: relative;
+}
 .top-menu__main {
-  height: calc(var(--max-height-dropdown) - var(--padding-inner) * 2);
-  width: 292px;
+  height: calc(min(596px, 100vh - 150px) - var(--padding-inner) * 2);
+  width: var(--with-main-menu);
   border-right: 1px solid var(--top-menu-main-border-color);
   overflow-y: auto;
 }
@@ -1400,11 +1401,19 @@ select {
   display: flex;
   gap: 14px;
 }
+.menu-column + .menu-column {
+  margin-top: 22px;
+}
 .menu-column__icon {
   position: relative;
   flex-shrink: 0;
   width: 36px;
   height: 36px;
+}
+.menu-column__icon-1 {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
 }
 .menu-column__icon-2 {
   width: 24px;
@@ -1413,7 +1422,7 @@ select {
   bottom: 0;
   right: 0;
   filter: var(--menu-column-icon-color);
-  object-fit: cover;
+  object-fit: contain;
 }
 .menu-column__heading {
   margin-top: 5px;
@@ -1427,15 +1436,32 @@ select {
 .menu-column__list {
   margin-top: 19px;
 }
+.menu-column__item:hover .sub-menu {
+  display: grid;
+}
+.menu-column__item:hover > .menu-column__link {
+  color: #0071dc;
+  font-weight: 500;
+}
 .menu-column__link {
   display: block;
   padding: 7px 0;
   font-size: 1.4rem;
   line-height: 142.857%; /* 142.857% */
 }
-.menu-column__link:hover {
-  color: #0071dc;
-  font-weight: 500;
+
+.sub-menu {
+  position: absolute;
+  inset: 0 0 0 var(--with-main-menu);
+  display: grid;
+  overflow-y: auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--padding-inner);
+  padding-left: var(--padding-inner);
+}
+
+.none {
+  display: none;
 }
 
 html.dark {

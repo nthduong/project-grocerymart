@@ -1,0 +1,114 @@
+.dropdown {
+    position: absolute;
+    left: 0;
+    padding-top: 54px;
+    // display: none;
+    width: min(1240px, 100%);
+
+    &__inner {
+        --padding-inner: 30px;
+        position: relative;
+        padding: var(--padding-inner);
+        border-radius: 20px;
+        background: var(--dropdown-bg-color);
+        box-shadow: 0px 40px 90px 20px var(--dropdown-shadow);
+
+        &::before {
+            content: url("../icons/polygon.svg");
+            position: absolute;
+            top: -13px;
+            left: var(--arrow-left-pos);
+            translate: -50%;
+            filter: var(--dropdown-arrow-color);
+        }
+    }
+}
+
+.top-menu {
+    --with-main-menu: 292px;
+    position: relative;
+    &__main {
+        height: calc(min(596px, 100vh - 150px) - var(--padding-inner) * 2);
+        width: var(--with-main-menu);
+        border-right: 1px solid var(--top-menu-main-border-color);
+        overflow-y: auto;
+    }
+}
+
+.menu-column {
+    display: flex;
+    gap: 14px;
+
+    &__icon {
+        position: relative;
+        flex-shrink: 0;
+        width: 36px;
+        height: 36px;
+    }
+    &__icon-1 {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+    }
+
+    &__icon-2 {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        filter: var(--menu-column-icon-color);
+        object-fit: contain;
+    }
+
+    &__heading {
+        margin-top: 5px;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 150%; /* 150% */
+    }
+
+    &__content {
+        flex: 1;
+    }
+
+    &__list {
+        margin-top: 19px;
+    }
+
+    &__item {
+        &:hover .sub-menu {
+            display: grid;
+        }
+    }
+
+    &__item:hover > &__link {
+        color: #0071dc;
+        font-weight: 500;
+    }
+
+    &__link {
+        display: block;
+        padding: 7px 0;
+        font-size: 1.4rem;
+        line-height: 142.857%; /* 142.857% */
+    }
+}
+
+.sub-menu {
+    position: absolute;
+    display: grid;
+    overflow-y: auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--padding-inner);
+    padding-left: var(--padding-inner);
+    inset: 0 0 0 var(--with-main-menu);
+    &__column {
+        display: ;
+        row-gap: 23px;
+    }
+}
+
+.none {
+    display: none;
+}
