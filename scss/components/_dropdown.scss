@@ -2,7 +2,7 @@
     position: absolute;
     left: 0;
     padding-top: 54px;
-    // display: none;
+    display: none;
     width: min(1240px, 100%);
 
     &__inner {
@@ -26,10 +26,12 @@
 
 .top-menu {
     --with-main-menu: 292px;
+    --max-inner-height: calc(min(582px, 100vh - 158px) - var(--padding-inner) * 2);
     position: relative;
+
     &__main {
-        height: calc(min(596px, 100vh - 150px) - var(--padding-inner) * 2);
         width: var(--with-main-menu);
+        height: var(--max-inner-height);
         border-right: 1px solid var(--top-menu-main-border-color);
         overflow-y: auto;
     }
@@ -81,11 +83,12 @@
     }
 
     &__item {
-        &:hover .sub-menu {
+        &--active .sub-menu {
             display: grid;
         }
     }
 
+    &__item--active > &__link,
     &__item:hover > &__link {
         color: #0071dc;
         font-weight: 500;
@@ -102,14 +105,18 @@
 .sub-menu {
     position: absolute;
     inset: 0 0 0 var(--with-main-menu);
-
-    display: grid;
+    display: none;
     overflow-y: auto;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--padding-inner);
     padding-left: var(--padding-inner);
-}
 
-.none {
-    display: none;
+    &--not-main {
+        height: var(--max-inner-height);
+        position: initial;
+        inset: initial;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding-left: 0;
+    }
 }
