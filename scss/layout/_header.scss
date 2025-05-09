@@ -132,12 +132,10 @@
             font-size: 1.6rem;
             line-height: 150%; /* 150% */
         }
-        @include abstracts.screen(lg) {
-            padding: 0 20px;
-        }
 
         @include abstracts.screen(sm) {
             height: 42px;
+            padding: 0 20px;
         }
     }
     &__arrow {
