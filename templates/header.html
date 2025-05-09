@@ -5,16 +5,29 @@
             <img src="./assets/icons/more.svg" alt="" class="top-bar__more-img icon" />
         </button>
         <!-- logo -->
-        <a href="./" class="logo">
+        <a href="#!" class="logo">
             <img class="logo__img" src="./assets/icons/logo.svg" alt="grocerymart" />
             <h1 class="logo__title">grocerymart</h1>
         </a>
 
         <!-- navbar -->
-        <nav id="navbar" class="navbar show">
+        <nav id="navbar" class="navbar hide">
             <button class="navbar__icon js-toggle" toggle-target="#navbar">
-                <img src="./assets/icons/arrow-left.svg" alt="" />
+                <img class="icon" src="./assets/icons/arrow-left.svg" alt="" />
             </button>
+
+            <a href="#!" class="nav-btn d-none d-md-flex">
+                <img src="../assets/icons/cart.svg" alt="" class="nav-btn__icon icon" />
+                <span class="nav-btn__title">Card</span>
+                <span class="nav-btn__qnt">3</span>
+            </a>
+
+            <a href="#!" class="nav-btn d-none d-md-flex">
+                <img src="../assets/icons/heart.svg" alt="" class="nav-btn__icon icon" />
+                <span class="nav-btn__title">Favorite</span>
+                <span class="nav-btn__qnt">3</span>
+            </a>
+
             <ul class="navbar__list js-dropdown-list">
                 <li class="navbar__item">
                     <a href="#!" class="navbar__link"
