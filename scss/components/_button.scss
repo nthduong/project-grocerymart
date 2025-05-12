@@ -1,0 +1,40 @@
+.filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--product-card-bg-filter-color);
+    height: 36px;
+    padding: 0 12px;
+    border-radius: 6px;
+
+    &__title {
+        color: var(--product-card-filter-color);
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 142.857%;
+    }
+}
+
+.like-btn {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--product-card-bg-icon);
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0px 20px 60px rgba(124, 124, 124, 0.2);
+
+    &:not(&--liked) &__icon--liked {
+        display: none;
+    }
+
+    &--liked &__icon {
+        display: none;
+    }
+
+    &__icon--liked {
+        margin-top: 6px;
+    }
+}
