@@ -21,7 +21,7 @@
         <!-- script -->
         <script src="./assets/js/script.js"></script>
     </head>
-    <body>
+    <body style="height: 10000px">
         <!-- header -->
         <header id="header" class="header"></header>
         <script>
@@ -98,12 +98,13 @@
                 <div class="home__row">
                     <h2 class="home__heading">Total LavAzza 1320</h2>
                     <div class="filter-wrap">
-                        <button class="filter-btn">
+                        <button class="filter-btn js-toggle" toggle-target="#home-filter">
                             <span class="filter-btn__title">Filter</span>
                             <img src="./assets/icons/filter.svg" alt="" class="filter-btn__img icon" />
                         </button>
 
-                        <div class="filter">
+                        <div id="home-filter" class="filter hide">
+                            <img src="./assets/icons/arrow-up.png" class="filter__icon-arrow" alt="" />
                             <h3 class="filter__heading">Filter</h3>
                             <form action="" class="filter-form">
                                 <div class="filter__row">
@@ -141,7 +142,7 @@
                                                     <img
                                                         src="./assets/icons/select-arrow.svg"
                                                         alt=""
-                                                        class="filter__select-icon icon"
+                                                        class="filter__select-icon filter__select-icon--margin-left icon"
                                                     />
                                                 </div>
                                                 <div class="filter__select-separate"></div>
@@ -165,8 +166,35 @@
                                     </div>
 
                                     <div class="filter__separate"></div>
-
-                                    <div class="filter__col"></div>
+                                    <!-- filter-col-3 -->
+                                    <div class="filter__col">
+                                        <label for="" class="filter__label">Brand</label>
+                                        <div class="filter__form-group">
+                                            <div class="filter_form-text-input filter_form-text-input--large">
+                                                <input
+                                                    type="text"
+                                                    class="filter__form-input filter__form-input--large"
+                                                    placeholder="Search brand name"
+                                                />
+                                                <img
+                                                    src="./assets/icons/search.svg"
+                                                    alt=""
+                                                    class="filter__form-input-icon icon"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="filter__form-group">
+                                            <div class="filter__form-tags">
+                                                <button class="filter__form-tag">Lavazza</button>
+                                                <button class="filter__form-tag">Nescafe</button>
+                                                <button class="filter__form-tag">Starbucks</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter__row filter__footer">
+                                    <button class="btn btn--text js-toggle" toggle-target="#home-filter">Cancel</button>
+                                    <button class="btn js-toggle" toggle-target="#home-filter">Show Result</button>
                                 </div>
                             </form>
                         </div>

@@ -12,6 +12,18 @@
     border-radius: 20px;
     box-shadow: var(--filter-shadow);
 
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &__icon-arrow {
+        height: 20px;
+        position: absolute;
+        top: -18px;
+        right: 21px;
+    }
+
     &__heading {
         font-size: 22px;
         font-weight: 500;
@@ -73,20 +85,45 @@
     }
 
     &_form-text-input {
+        display: flex;
+        align-items: center;
         width: 121px;
+        height: 36px;
+        border-radius: 6px;
+        border: 1px solid #d2d1d6;
+        overflow: hidden;
+
+        &--large {
+            width: 334px;
+            height: 47px;
+        }
     }
 
     &__form-input {
         width: 100%;
-        height: 36px;
         padding: 0 12px;
-        background: var(--filter-bg);
-        border-radius: 6px;
-        border: 1px solid #d2d1d6;
+        background: transparent;
 
         font-size: 1.4rem;
         font-weight: 500;
         line-height: 142.857%;
+
+        &--large {
+            font-size: 1.5rem;
+            line-height: 22px;
+            margin-bottom: 3px;
+        }
+
+        &-icon {
+            margin-right: 16px;
+        }
+
+        &::placeholder {
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 146.667%;
+            color: #9e9da8;
+        }
     }
 
     &__separate {
@@ -107,10 +144,54 @@
         display: flex;
         align-items: center;
 
-        &__separate {
-            height: 100%;
+        &-separate {
+            height: 35px;
             width: 1px;
             background: #d2d1d6;
+            margin: 0 14px;
         }
+
+        &-weight {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 142.857%;
+        }
+
+        &-icon {
+            margin-left: 17px;
+
+            &--margin-left {
+                margin-left: 65px;
+            }
+        }
+    }
+
+    &__form-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    &__form-tag {
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: var(--filer-tag-bg-color);
+
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 142.857%;
+        color: #9e9da8;
+
+        transition: color 0.2s;
+
+        &:hover {
+            color: var(--text-color);
+        }
+    }
+
+    &__footer {
+        margin-top: 32px;
+        display: flex;
+        justify-content: flex-end;
     }
 }
