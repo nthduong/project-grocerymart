@@ -40,6 +40,8 @@ html.dark {
     --filter-bg: #292e39;
     --filter-shadow: 0px 40px 90px rgba(0, 0, 0, 0.4);
     --filer-tag-bg-color: #171c28;
+    --filter-arrow-color: brightness(0) saturate(100%) invert(13%) sepia(8%) saturate(1936%) hue-rotate(183deg)
+        brightness(93%) contrast(85%);
 
     @include abstracts.screen(lg) {
         --header-shadow: rgba(0, 0, 0, 0.2);

@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .filter-wrap {
     position: relative;
     z-index: 1;
@@ -12,6 +14,10 @@
     border-radius: 20px;
     box-shadow: var(--filter-shadow);
 
+    @include abstracts.screen(sm) {
+        width: 85vw;
+    }
+
     &.hide {
         opacity: 0;
         visibility: hidden;
@@ -22,6 +28,7 @@
         position: absolute;
         top: -18px;
         right: 21px;
+        filter: var(--filter-arrow-color);
     }
 
     &__heading {
@@ -97,6 +104,10 @@
             width: 334px;
             height: 47px;
         }
+
+        @include abstracts.screen(xl) {
+            width: 100%;
+        }
     }
 
     &__form-input {
@@ -130,6 +141,12 @@
         width: 1px;
         background: #eee;
         margin: 0 30px;
+
+        @include abstracts.screen(xl) {
+            height: 1px;
+            width: 100%;
+            margin: 20px 0;
+        }
     }
 
     &__select-wrap {
@@ -143,25 +160,46 @@
     &__select {
         display: flex;
         align-items: center;
+        width: 100%;
 
         &-separate {
             height: 35px;
             width: 1px;
             background: #d2d1d6;
             margin: 0 14px;
+            flex-shrink: 0;
         }
 
         &-weight {
             font-size: 14px;
             font-weight: 500;
             line-height: 142.857%;
+
+            &-margin {
+                @include abstracts.screen(sm) {
+                    margin-right: 65px;
+                }
+            }
         }
 
         &-icon {
             margin-left: 17px;
 
+            @include abstracts.screen(xl) {
+                margin-left: 100px;
+            }
+            @include abstracts.screen(sm) {
+                margin-left: auto;
+            }
+
             &--margin-left {
                 margin-left: 65px;
+                @include abstracts.screen(xl) {
+                    margin-left: 100px;
+                }
+                @include abstracts.screen(sm) {
+                    margin-left: auto;
+                }
             }
         }
     }
@@ -170,6 +208,10 @@
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
+
+        @include abstracts.screen(sm) {
+            gap: 8px;
+        }
     }
 
     &__form-tag {
@@ -184,6 +226,10 @@
 
         transition: color 0.2s;
 
+        @include abstracts.screen(sm) {
+            font-weight: 400;
+        }
+
         &:hover {
             color: var(--text-color);
         }
@@ -193,5 +239,11 @@
         margin-top: 32px;
         display: flex;
         justify-content: flex-end;
+    }
+
+    &__content {
+        @include abstracts.screen(xl) {
+            flex-direction: column;
+        }
     }
 }
