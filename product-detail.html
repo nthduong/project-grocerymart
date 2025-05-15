@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Grocery Mart</title>
+
+        <!-- favicon -->
+        <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+
+        <!-- style -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+
+        <!-- script -->
+        <script src="./assets/js/script.js"></script>
+    </head>
+
+    <body>
+        <!-- header -->
+        <header id="header" class="header"></header>
+        <script>
+            load("#header", "./templates/header.html");
+        </script>
+        <main class="product-page">
+            <div class="container">
+                <div class="product-container">
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs__item">
+                            <a href="#!" class="breadcrumbs__link"
+                                >Departments
+                                <img src="./assets/icons/arrow-right.svg" alt="" class="breadcrumbs__item-img" />
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#!" class="breadcrumbs__link"
+                                >Coffee
+                                <img src="./assets/icons/arrow-right.svg" alt="" class="breadcrumbs__item-img" />
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#!" class="breadcrumbs__link"
+                                >Coffee Beans
+                                <img src="./assets/icons/arrow-right.svg" alt="" class="breadcrumbs__item-img" />
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#!" class="breadcrumbs__link breadcrumbs__link--curent">LavAzza </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="product-container">
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="prod-preview">
+                                <div class="prod-list">
+                                    <div class="prod-item">
+                                        <img src="./assets/img/product/item-1.png" alt="" class="prod-item-img" />
+                                    </div>
+                                    <div class="prod-item">
+                                        <img src="./assets/img/product/item-2.png" alt="" class="prod-item-img" />
+                                    </div>
+                                    <div class="prod-item">
+                                        <img src="./assets/img/product/item-3.png" alt="" class="prod-item-img" />
+                                    </div>
+                                    <div class="prod-item">
+                                        <img src="./assets/img/product/item-4.png" alt="" class="prod-item-img" />
+                                    </div>
+                                </div>
+                                <div class="prod-thumb">
+                                    <img
+                                        src="./assets/img/product/item-1.png"
+                                        alt=""
+                                        class="prod-thumb__img prod-thumb__img--current"
+                                    />
+                                    <img src="./assets/img/product/item-2.png" alt="" class="prod-thumb__img" />
+                                    <img src="./assets/img/product/item-3.png" alt="" class="prod-thumb__img" />
+                                    <img src="./assets/img/product/item-4.png" alt="" class="prod-thumb__img" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque adipisci cupiditate eum
+                            impedit accusamus aspernatur optio dolore natus. Non animi illo dolorum corporis cupiditate
+                            sunt eveniet! Suscipit quidem possimus molestiae.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- footer -->
+        <footer id="footer" class="footer"></footer>
+        <script>
+            load("#footer", "./templates/footer.html");
+        </script>
+    </body>
+</html>
