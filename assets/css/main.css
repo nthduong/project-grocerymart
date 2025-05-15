@@ -2085,7 +2085,7 @@ input:-webkit-autofill {
   display: none;
   height: 7px;
   width: 13px;
-  top: 4px;
+  top: 3px;
   left: 3px;
   rotate: -45deg;
   border: 2px solid;
@@ -2109,6 +2109,28 @@ input:-webkit-autofill {
     font-size: 1.4rem;
     line-height: 142.857%;
   }
+}
+
+.message {
+  padding: 12px 12px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+@media (max-width: 767.98px) {
+  .message {
+    font-size: 1.4rem;
+  }
+}
+.message--success {
+  border: 2px solid #5bc45f;
+  background: rgba(39, 243, 117, 0.2);
 }
 
 .top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
@@ -2648,12 +2670,15 @@ html {
 }
 .auth__intro-img {
   max-width: 100%;
+  width: var(--width);
 }
 .auth__content {
   padding: 0 30px;
   background-color: var(--auth-content-bg);
   flex: 1;
   transition: translate 0.25s;
+  display: flex;
+  align-items: center;
 }
 @media (max-width: 767.98px) {
   .auth__content {

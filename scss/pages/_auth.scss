@@ -40,6 +40,7 @@
 
         &-img {
             max-width: 100%;
+            width: var(--width);
         }
     }
 
@@ -48,6 +49,8 @@
         background-color: var(--auth-content-bg);
         flex: 1;
         transition: translate 0.25s;
+        display: flex;
+        align-items: center;
 
         @include abstracts.screen(md) {
             overflow-y: auto;
