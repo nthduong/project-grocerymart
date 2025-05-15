@@ -40,6 +40,10 @@
 }
 
 .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     background-color: #ffb700;
     border-radius: 6px;
     padding: 8px 10px;
@@ -49,7 +53,9 @@
     color: #1a162e;
 
     + .btn {
-        margin-left: 20px;
+        &:not(.btn--no-margin) {
+            margin-left: 20px;
+        }
     }
 
     &--text {

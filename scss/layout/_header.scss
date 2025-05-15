@@ -18,6 +18,29 @@
     z-index: 1;
     @extend %flex-align-center;
 
+    &__logo {
+        @include abstracts.screen(lg) {
+            gap: 10px;
+            margin-left: 39px;
+        }
+        @include abstracts.screen(md) {
+            margin-left: initial;
+        }
+
+        &-img {
+            @include abstracts.screen(lg) {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        &-title {
+            @include abstracts.screen(lg) {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
     @include abstracts.screen(lg) {
         padding: 20px 0;
     }
@@ -165,6 +188,30 @@
 
     @include abstracts.screen(md) {
         margin-left: initial;
+    }
+
+    &__sign-in,
+    &__sign-up {
+        height: 50px;
+        padding: 0 20px;
+        font-size: 18px;
+
+        @include abstracts.screen(md) {
+            height: 40px;
+            padding: 0 12px;
+            font-size: 14px;
+        }
+    }
+
+    &__sign-up {
+        @include abstracts.screen(md) {
+            margin-left: 0 !important;
+        }
+    }
+
+    &__sign-in {
+        font-weight: 500;
+        color: var(--text-color);
     }
 
     &__group {

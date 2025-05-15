@@ -1,0 +1,132 @@
+@use "../abstracts";
+
+$error-color: #ed4337;
+.form {
+    &__group {
+        position: relative;
+        margin-top: 30px;
+        &-inline {
+            display: flex;
+            align-items: center;
+        }
+
+        @include abstracts.screen(md) {
+            margin-top: 25px;
+        }
+    }
+
+    &__group:has(:invalid):has(&__input:not(:placeholder-shown)) &__text-input {
+        border-color: $error-color;
+        background: rgba($color: $error-color, $alpha: 0.1);
+    }
+    &__group:has(:invalid):has(&__input:not(:placeholder-shown)) &__error {
+        display: block;
+    }
+
+    &__error {
+        bottom: -17px;
+        left: 2px;
+        position: absolute;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: $error-color;
+        display: none;
+    }
+
+    &__text-input {
+        height: 50px;
+        border-radius: 10px;
+        border: 2px solid var(--auth-input-border-color);
+        // overflow: hidden;
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        &:focus-within {
+            border-color: #1f85e6;
+        }
+        &:focus-within .form__input-icon {
+            filter: brightness(0) saturate(100%) invert(40%) sepia(70%) saturate(961%) hue-rotate(176deg)
+                brightness(99%) contrast(94%);
+        }
+    }
+
+    &__group:has(:invalid):has(&__input:not(:placeholder-shown)) &__input-icon {
+        filter: brightness(0) saturate(100%) invert(38%) sepia(69%) saturate(3087%) hue-rotate(339deg) brightness(94%)
+            contrast(97%);
+        animation: shake 0.8s;
+    }
+
+    &__input {
+        flex: 1;
+        height: 100%;
+        width: 100%;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+        &::placeholder {
+            color: var(--auth-input-border-color);
+        }
+
+        &-icon {
+            filter: brightness(0) saturate(100%) invert(72%) sepia(0%) saturate(4972%) hue-rotate(282deg)
+                brightness(101%) contrast(101%);
+            margin-left: 12px;
+        }
+    }
+
+    &__checkbox {
+        user-select: none;
+        padding-left: 25px;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        &::before {
+            width: 18px;
+            height: 18px;
+            border: 2px solid var(--auth-input-border-color);
+            border-radius: 5px;
+        }
+
+        &::after {
+            display: none;
+            height: 7px;
+            width: 13px;
+            top: 4px;
+            left: 3px;
+            rotate: -45deg;
+            border: 2px solid;
+            border-color: transparent transparent #fff #fff;
+        }
+    }
+
+    &__checkbox:has(:checked) {
+        &::before {
+            border-color: #ffb700;
+            background-color: #ffb700;
+        }
+        &::after {
+            display: block;
+        }
+    }
+
+    &__checkbox-label {
+        color: #9e9da8;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+            line-height: 142.857%;
+        }
+    }
+}

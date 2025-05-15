@@ -43,6 +43,16 @@ html.dark {
     --filter-arrow-color: brightness(0) saturate(100%) invert(13%) sepia(8%) saturate(1936%) hue-rotate(183deg)
         brightness(93%) contrast(85%);
 
+    //auth
+    --auth-intro-bg: #171c28;
+    --auth-content-bg: #292e39;
+    --auth-intro-text: #b9babe;
+    --auth-content-text: #b9babe;
+    --auth-input-border-color: #b9babe;
+    --auth-btn-color: #b9babe;
+    --auth-icon-gg-color: brightness(0) saturate(100%) invert(84%) sepia(8%) saturate(101%) hue-rotate(191deg)
+        brightness(90%) contrast(85%);
+
     @include abstracts.screen(lg) {
         --header-shadow: rgba(0, 0, 0, 0.2);
     }

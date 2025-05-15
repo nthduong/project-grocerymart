@@ -1,0 +1,184 @@
+@use "../abstracts";
+
+.auth {
+    background-color: var(--auth-intro-bg);
+    display: flex;
+    min-height: 100vh;
+
+    @supports (-webkit-touch-callout: none) {
+        min-height: -webkit-fill-available;
+    }
+
+    @include abstracts.screen(md) {
+        &__logo {
+            position: absolute;
+            top: 80px;
+        }
+        &__next {
+            position: absolute;
+            bottom: 80px;
+        }
+    }
+
+    &__intro {
+        display: flex;
+        padding: 0 30px;
+        flex-direction: column;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+
+        &-text {
+            max-width: 412px;
+            margin-top: 49px;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+            color: var(--auth-intro-text);
+        }
+
+        &-img {
+            max-width: 100%;
+        }
+    }
+
+    &__content {
+        padding: 0 30px;
+        background-color: var(--auth-content-bg);
+        flex: 1;
+        transition: translate 0.25s;
+
+        @include abstracts.screen(md) {
+            overflow-y: auto;
+            transition: translate 0.25s;
+            inset: 0;
+            position: fixed;
+            &.hide {
+                translate: 100% 0;
+            }
+        }
+
+        &-inner {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            max-width: 460px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+
+            @include abstracts.screen(md) {
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+        }
+    }
+
+    &__heading {
+        margin-top: 50px;
+        font-size: 3rem;
+        font-weight: 500;
+        line-height: 146.667%;
+        color: var(--auth-content-text);
+
+        @include abstracts.screen(md) {
+            margin-top: 30px;
+            font-size: 2.2rem;
+            line-height: 145.455%;
+        }
+    }
+
+    &__desc {
+        padding: 0 20px;
+        max-width: 460px;
+        color: #9e9da8;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+        margin-bottom: 30px;
+
+        @include abstracts.screen(md) {
+            max-width: 315px;
+            font-size: 1.4rem;
+            line-height: 142.857%;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__form {
+        width: 100%;
+    }
+
+    &__pull-right {
+        margin-left: auto;
+    }
+
+    &__link {
+        color: #0071dc;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 146.667%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+            line-height: 142.857%;
+        }
+
+        &-big {
+            font-size: 1.8rem;
+            line-height: 144.444%;
+
+            @include abstracts.screen(md) {
+                font-size: 1.6rem;
+                line-height: 150%;
+            }
+        }
+    }
+
+    &__btn-group {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 50px;
+
+        @include abstracts.screen(md) {
+            margin-top: 30px;
+            gap: 20px;
+        }
+    }
+
+    &__btn {
+        height: 50px;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 144.444%;
+
+        &-gg {
+            color: var(--auth-btn-color);
+        }
+    }
+
+    &__text {
+        margin-top: 80px;
+        font-size: 1.8rem;
+        line-height: 144.444%;
+        color: #9e9da8;
+        gap: 10px;
+        display: flex;
+        align-items: center;
+
+        @include abstracts.screen(md) {
+            margin-top: 20px;
+            font-size: 1.6rem;
+            line-height: 150%;
+        }
+    }
+
+    &__icon-gg {
+        filter: var(--auth-icon-gg-color);
+    }
+}
