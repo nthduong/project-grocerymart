@@ -30,6 +30,13 @@
         </script>
         <main class="product-page">
             <div class="container">
+                <div class="product-container search-bar d-none d-md-flex">
+                    <input type="text" class="search-bar__input" placeholder="Search for item" />
+                    <button class="search-bar__submit">
+                        <img src="./assets/icons/search.svg" alt="" class="search-bar__icon icon" />
+                    </button>
+                </div>
+                <!-- breadcrumbs -->
                 <div class="product-container">
                     <ul class="breadcrumbs">
                         <li class="breadcrumbs__item">
@@ -56,9 +63,10 @@
                     </ul>
                 </div>
 
-                <div class="product-container">
+                <!-- product info -->
+                <div class="product-container product-container-preview">
                     <div class="row">
-                        <div class="col-5">
+                        <div class="col-5 col-xl-6 col-lg-12">
                             <div class="prod-preview">
                                 <div class="prod-list">
                                     <div class="prod-item">
@@ -74,7 +82,7 @@
                                         <img src="./assets/img/product/item-4.png" alt="" class="prod-item-img" />
                                     </div>
                                 </div>
-                                <div class="prod-thumb">
+                                <div class="prod-thumb d-md-none">
                                     <img
                                         src="./assets/img/product/item-1.png"
                                         alt=""
@@ -86,10 +94,270 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-7">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque adipisci cupiditate eum
-                            impedit accusamus aspernatur optio dolore natus. Non animi illo dolorum corporis cupiditate
-                            sunt eveniet! Suscipit quidem possimus molestiae.
+                        <div class="col-7 col-xl-6 col-lg-12">
+                            <section class="prod-info">
+                                <form action="#!" class="form">
+                                    <h1 class="prod-info__heading">
+                                        Coffee Beans - Espresso Arabica and Robusta Beans
+                                    </h1>
+                                    <div class="row">
+                                        <div class="col-5 col-xxl-6 col-xl-12">
+                                            <div class="prod-prop">
+                                                <img src="./assets/icons/star.svg" alt="" class="prod-prop__icon" />
+                                                <h4 class="prod-prop__title">(3.5) 1100 reviews</h4>
+                                            </div>
+                                            <label for="" class="form__label prod-info__label">Size/Weight</label>
+                                            <div class="filter__form-group">
+                                                <div class="form__select-wrap">
+                                                    <div class="form__select" style="--width: 144px">
+                                                        500g
+                                                        <img
+                                                            src="./assets/icons/select-arrow.svg"
+                                                            alt=""
+                                                            class="form__select-arrow icon"
+                                                        />
+                                                    </div>
+                                                    <div class="form__select">
+                                                        Gram
+                                                        <img
+                                                            src="./assets/icons/select-arrow.svg"
+                                                            alt=""
+                                                            class="form__select-arrow icon"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="filter__form-group">
+                                                <div class="form__tags">
+                                                    <button class="form__tag prod-info__tag">Small</button>
+                                                    <button class="form__tag prod-info__tag">Medium</button>
+                                                    <button class="form__tag prod-info__tag">Large</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-7 col-xxl-6 col-xl-12">
+                                            <div class="prod-props">
+                                                <div class="prod-prop">
+                                                    <img
+                                                        src="./assets/icons/document.svg"
+                                                        alt=""
+                                                        class="prod-prop__icon icon"
+                                                    />
+                                                    <h4 class="prod-prop__title">Compare</h4>
+                                                </div>
+                                                <div class="prod-prop">
+                                                    <img
+                                                        src="./assets/icons/cart.svg"
+                                                        alt=""
+                                                        class="prod-prop__icon icon"
+                                                    />
+                                                    <div>
+                                                        <h4 class="prod-prop__title">Delivery</h4>
+                                                        <p class="prod-prop__desc">From $6 for 1-3 days</p>
+                                                    </div>
+                                                </div>
+                                                <div class="prod-prop">
+                                                    <img
+                                                        src="./assets/icons/bag.svg"
+                                                        alt=""
+                                                        class="prod-prop__icon icon"
+                                                    />
+                                                    <div>
+                                                        <h4 class="prod-prop__title">Pickup</h4>
+                                                        <p class="prod-prop__desc">Out of 2 store, today</p>
+                                                    </div>
+                                                </div>
+                                                <div class="prod-prop">
+                                                    <div class="prod-card">
+                                                        <div class="prod-card__row">
+                                                            <span class="prod-card__price">$500.00</span>
+                                                            <span class="prod-card__tax">10%</span>
+                                                        </div>
+                                                        <span class="prod-card__price-total">$540.00</span>
+                                                        <div class="prod-card__bottom">
+                                                            <button class="btn prod-card__submit">Add to cart</button>
+                                                            <button class="like-btn prod-card__btn">
+                                                                <img
+                                                                    src="./assets/icons/heart.svg"
+                                                                    alt=""
+                                                                    class="like-btn__icon icon"
+                                                                />
+                                                                <img
+                                                                    src="./assets/icons/heart-liked.svg"
+                                                                    alt=""
+                                                                    class="like-btn__icon--liked"
+                                                                />
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- product-content -->
+                <div class="product-container">
+                    <div class="product-tab">
+                        <div class="product-list">
+                            <div class="product-item">Description</div>
+                            <div class="product-item">Features</div>
+                            <div class="product-item product-item--current">Review (1100)</div>
+                            <div class="product-item">Similar</div>
+                        </div>
+                        <div class="product-contents">
+                            <div class="product-content">content 1</div>
+                            <div class="product-content">content 2</div>
+                            <div class="product-content product-content--current">
+                                <h2 class="product-content__heading">What our customers are saying</h2>
+                                <div class="row row-cols-3 row-cols-md-1 gx-lg-2 gy-md-3">
+                                    <div class="col">
+                                        <div class="review-card">
+                                            <div class="review-card__row">
+                                                <img
+                                                    src="./assets/img/review-card/item-1.png"
+                                                    alt=""
+                                                    class="review-card__img"
+                                                />
+                                                <div class="review-card__info">
+                                                    <h3 class="review-card__title">Jakir Hussen</h3>
+                                                    <p class="review-card__desc">
+                                                        Great product, I love this Coffee Beans
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="review-card__rating">
+                                                <div class="review-card__stars">
+                                                    <img
+                                                        src="./assets/icons/star.svg"
+                                                        alt=""
+                                                        class="review-card__star"
+                                                    />
+                                                    <img
+                                                        src="./assets/icons/star.svg"
+                                                        alt=""
+                                                        class="review-card__star"
+                                                    />
+                                                    <img
+                                                        src="./assets/icons/star.svg"
+                                                        alt=""
+                                                        class="review-card__star"
+                                                    />
+                                                    <img
+                                                        src="./assets/icons/star.svg"
+                                                        alt=""
+                                                        class="review-card__star"
+                                                    />
+                                                    <img
+                                                        src="./assets/icons/star.svg"
+                                                        alt=""
+                                                        class="review-card__star"
+                                                    />
+                                                </div>
+                                                <span class="review-card__rating-title">(5) Review</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="col">
+                                            <div class="review-card">
+                                                <div class="review-card__row">
+                                                    <img
+                                                        src="./assets/img/review-card/item-2.png"
+                                                        alt=""
+                                                        class="review-card__img"
+                                                    />
+                                                    <div class="review-card__info">
+                                                        <h3 class="review-card__title">Jubed Ahmed</h3>
+                                                        <p class="review-card__desc">
+                                                            Awesome Coffee, I love this Coffee Beans
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="review-card__rating">
+                                                    <div class="review-card__stars">
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__star"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__star"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__star"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__star"
+                                                        />
+                                                    </div>
+                                                    <span class="review-card__rating-title">(4) Review</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="col">
+                                            <div class="review-card">
+                                                <div class="review-card__row">
+                                                    <img
+                                                        src="./assets/img/review-card/item-3.png"
+                                                        alt=""
+                                                        class="review-card__img"
+                                                    />
+                                                    <div class="review-card__info">
+                                                        <h3 class="review-card__title">Delwar Hussain</h3>
+                                                        <p class="review-card__desc">
+                                                            Great product, I like this Coffee Beans
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="review-card__rating">
+                                                    <div class="review-card__stars">
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__star"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__star"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__star"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__star"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__star"
+                                                        />
+                                                    </div>
+                                                    <span class="review-card__rating-title">(5) Review</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-content">content 4</div>
                         </div>
                     </div>
                 </div>

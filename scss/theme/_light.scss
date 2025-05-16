@@ -54,6 +54,24 @@ html {
     --product-detail-breadcrumbs-bg: #f6f6f6;
     --product-detail-breadcrumbs-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
 
+    --product-border-img-active: #000;
+    --product-border-img: #ebebeb;
+    --product-border-img-hover: #9e9da8;
+
+    --product-info-bg: #f6f6f6;
+    --product-info-tag: #ededf6;
+    --product-info-cart-border: #b9babe;
+    --product-info-cart-text: #000;
+    --product-info-tax-bg: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #67b044;
+    --product-review-card-bg: #fafafd;
+
+    @include abstracts.screen(md) {
+        --product-detail-bg: #fafafd;
+        --product-detail-breadcrumbs-bg: #fff;
+        --product-info-bg: #fff;
+        --product-review-card-bg: #fff;
+    }
+
     @include abstracts.screen(lg) {
         --header-bg-color: #fff;
         --header-shadow: rgba(237, 237, 246, 0.2);
