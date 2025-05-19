@@ -3,6 +3,7 @@
     background: var(--product-card-bg);
     border-radius: 20px;
     height: 100%;
+    box-shadow: var(--product-card-shadow);
 
     &__img-wrap {
         padding-top: 100%;
