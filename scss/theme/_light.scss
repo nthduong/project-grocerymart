@@ -72,6 +72,17 @@ html {
 
     --cart-preview-bg-img: #f2f2f2;
 
+    //checkout
+    --checkout-detail-bg: #f6f6f6;
+    --checkout-input-border: #d2d1d6;
+    --checkout-separate: #d2d1d6;
+    --checkout-cart-bg: #fff;
+    --checkout-cart-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+
+    @include abstracts.screen(md) {
+        --checkout-detail-bg: #fafafd;
+    }
+
     @include abstracts.screen(md) {
         --product-detail-bg: #fafafd;
         --product-detail-breadcrumbs-bg: #fff;

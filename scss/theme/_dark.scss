@@ -79,6 +79,9 @@ html.dark {
 
     --cart-preview-bg-img: #171c28;
 
+    //checkout
+    --checkout-detail-bg: #292e38;
+
     @include abstracts.screen(lg) {
         --header-shadow: rgba(0, 0, 0, 0.2);
     }
