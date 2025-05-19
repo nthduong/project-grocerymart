@@ -225,6 +225,8 @@
     font-weight: 500;
     line-height: 145.455%;
     padding: 8px 30px;
+    user-select: none;
+    cursor: pointer;
 
     @include abstracts.screen(md) {
         font-size: 1.4rem;
