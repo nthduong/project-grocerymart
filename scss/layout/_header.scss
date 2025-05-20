@@ -308,20 +308,15 @@
         margin-top: 30px;
         padding: 30px;
         background: var(--act-dropdown-inner-bg);
-        width: 645px;
+        width: 500px;
         border-radius: 20px;
         box-shadow: var(--act-dropdown-shadow);
-
-        @include abstracts.screen(xl) {
-            width: 500px;
-            padding: 30px;
-        }
     }
 
     &__arrow {
         position: absolute;
         top: -16px;
-        right: 106px;
+        right: 90px;
         height: 20px;
         width: 45px;
         filter: var(--filter-arrow-color);

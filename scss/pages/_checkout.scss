@@ -29,13 +29,42 @@
         margin-top: 30px;
     }
 
+    &__sub-heading {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+        margin: 30px 0;
+    }
+
+    &__heading {
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 141.667%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+            line-height: 150%;
+        }
+    }
+
+    &__separate {
+        height: 1px;
+        width: 100%;
+        background: var(--shipping-separate);
+        margin: 30px 0;
+
+        @include abstracts.screen(md) {
+            margin: 16px 0;
+        }
+    }
+
     &__bottom {
         display: flex;
         justify-content: space-between;
 
         &-left {
+            margin-top: 30px;
             display: flex;
-
             align-self: flex-end;
         }
 
@@ -107,7 +136,7 @@
     }
 
     &__btn {
-        height: 68px;
+        height: 50px;
         font-size: 2.2rem;
         font-weight: 500;
         line-height: 145.455%;
@@ -115,7 +144,7 @@
 
         @include abstracts.screen(md) {
             margin-top: 16px;
-            height: 55px;
+            height: 50px;
             font-size: 1.6rem;
             font-weight: 500;
             line-height: 150%;
@@ -269,6 +298,10 @@
         font-weight: 500;
         line-height: 150%;
     }
+
+    &__btn {
+        display: flex;
+    }
 }
 
 .cart-separate {
@@ -330,5 +363,133 @@
         font-style: normal;
         font-weight: 400;
         line-height: 142.857%;
+    }
+}
+
+.user-address {
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+            line-height: 150%;
+        }
+    }
+
+    &__desc {
+        margin-top: 4px;
+        font-size: 1.5rem;
+        line-height: 146.667%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+            line-height: 142.857%;
+        }
+    }
+
+    &__btn {
+        padding: 10px 20px;
+    }
+}
+
+.address-card {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    @include abstracts.screen(md) {
+        flex-direction: column;
+        gap: 16px;
+    }
+    &__info {
+        margin-left: 16px;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+            line-height: 150%;
+        }
+    }
+
+    &__desc {
+        margin-top: 4px;
+        font-size: 1.5rem;
+        line-height: 146.667%;
+        width: min(520px, 90%);
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+            line-height: 142.857%;
+        }
+    }
+
+    &__list {
+        margin-top: 20px;
+        display: flex;
+        gap: 30px;
+        list-style: disc inside;
+
+        @include abstracts.screen(md) {
+            gap: 16px;
+        }
+    }
+
+    &__item {
+        font-size: 14px;
+        line-height: 142.857%;
+        margin-left: 8px;
+    }
+
+    &__right {
+        display: flex;
+        align-self: flex-end;
+
+        @include abstracts.screen(md) {
+            align-self: flex-start;
+        }
+    }
+    &__left {
+        display: flex;
+    }
+
+    &__edit {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.8rem;
+        line-height: 144.444%;
+    }
+
+    &__input {
+        appearance: none;
+        &::before {
+            content: url("../icons/checkbox.svg");
+        }
+        &:not(:checked)::before {
+            filter: var(--shipping-checkbox);
+        }
+
+        &:checked::before {
+            content: url("../icons/checkbox-checked.svg");
+        }
     }
 }

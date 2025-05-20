@@ -87,6 +87,14 @@ html.dark {
     --checkout-cart-shadow: 0px 20px 60px 10px rgba(23, 28, 40, 0.2);
     --checkout-gift-bg: #292e39;
 
+    //dialog
+    --dialog-bg: #292e38;
+    --dialog-shadow: 0px 20px 60px 10px rgba(23, 28, 40, 0.2);
+
+    //shipping
+    --shipping-separate: #292e39;
+    --shipping-checkbox: brightness(0) saturate(100%) invert(89%) sepia(6%) saturate(128%) hue-rotate(191deg)
+        brightness(84%) contrast(88%);
     @include abstracts.screen(lg) {
         --header-shadow: rgba(0, 0, 0, 0.2);
     }

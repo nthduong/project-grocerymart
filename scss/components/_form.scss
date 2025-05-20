@@ -23,6 +23,24 @@ $error-color: #ed4337;
         display: block;
     }
 
+    &__row {
+        display: flex;
+        gap: 30px;
+
+        @include abstracts.screen(md) {
+            gap: 20px;
+        }
+
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        > * {
+            flex: 1;
+        }
+    }
+
     &__error {
         bottom: -17px;
         left: 2px;
@@ -54,6 +72,37 @@ $error-color: #ed4337;
         filter: brightness(0) saturate(100%) invert(38%) sepia(69%) saturate(3087%) hue-rotate(339deg) brightness(94%)
             contrast(97%);
         animation: shake 0.8s;
+    }
+
+    &__text-area {
+        display: flex;
+        align-items: center;
+        height: 100px;
+        padding: 12px;
+        &-input {
+            resize: none;
+            flex: 1;
+            width: 100%;
+            height: 100%;
+
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+
+            &::placeholder {
+                color: var(--auth-input-border-color);
+            }
+
+            @include abstracts.screen(md) {
+                font-size: 1.6rem;
+            }
+        }
+        border-radius: 10px;
+        border: 2px solid var(--auth-input-border-color);
+
+        &:focus-within {
+            border-color: #1f85e6;
+        }
     }
 
     &__input {
