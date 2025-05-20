@@ -78,6 +78,7 @@ html {
     --checkout-separate: #d2d1d6;
     --checkout-cart-bg: #fff;
     --checkout-cart-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+    --checkout-gift-bg: linear-gradient(0deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), #7644e1;
 
     @include abstracts.screen(md) {
         --checkout-detail-bg: #fafafd;

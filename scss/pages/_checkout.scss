@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .checkout-page {
     display: flex;
     flex-direction: column;
@@ -18,6 +20,10 @@
     border-radius: 20px;
     background: var(--checkout-cart-bg);
     box-shadow: var(--checkout-cart-shadow);
+
+    @include abstracts.screen(md) {
+        padding: 16px;
+    }
 
     + .cart-info {
         margin-top: 30px;
@@ -94,6 +100,10 @@
         display: flex;
         flex-direction: column;
         gap: 14px;
+
+        @include abstracts.screen(md) {
+            gap: 12px;
+        }
     }
 
     &__btn {
@@ -102,6 +112,14 @@
         font-weight: 500;
         line-height: 145.455%;
         margin-top: 20px;
+
+        @include abstracts.screen(md) {
+            margin-top: 16px;
+            height: 55px;
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 150%;
+        }
     }
 
     &__sub-separate {
@@ -115,10 +133,24 @@
     display: flex;
     align-items: center;
     gap: 30px;
+
+    @include abstracts.screen(md) {
+        align-items: start;
+        gap: 16px;
+    }
     &__thumb {
         width: 175px;
         height: 172px;
         object-fit: contain;
+
+        @include abstracts.screen(xl) {
+            width: 120px;
+            height: 120px;
+        }
+        @include abstracts.screen(md) {
+            width: 60px;
+            height: 60px;
+        }
     }
 
     &__content {
@@ -126,10 +158,26 @@
         justify-content: space-between;
         flex-grow: 1;
 
+        @include abstracts.screen(md) {
+            flex-direction: column;
+            gap: 16px;
+        }
+
         &-left {
             display: flex;
             flex-direction: column;
             gap: 16px;
+        }
+
+        &-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            @include abstracts.screen(md) {
+                align-items: flex-start;
+            }
         }
     }
 
@@ -137,6 +185,12 @@
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 144.444%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 142.857%;
+        }
     }
 
     &__price-wrap {
@@ -156,6 +210,12 @@
     &__input-wrap {
         display: flex;
         gap: 20px;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-start;
+        }
     }
 
     &__input {
@@ -178,23 +238,27 @@
         line-height: 146.667%;
     }
 
-    &__content-right {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-end;
-    }
-
     &__price {
         font-size: 2.2rem;
         font-weight: 700;
         line-height: 145.455%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 144.444%;
+        }
     }
 
     &__ctrl {
         display: flex;
         align-items: center;
         gap: 30px;
+        min-height: 44px;
+
+        @include abstracts.screen(md) {
+            margin-top: 6px;
+        }
     }
 
     &__ctrl-btn {
@@ -212,11 +276,38 @@
     width: 100%;
     background: var(--checkout-separate);
     margin: 30px 0;
+
+    @include abstracts.screen(md) {
+        &:last-child {
+            display: none;
+        }
+    }
 }
 
 .gift-item {
     display: flex;
+    align-items: center;
     gap: 20px;
+
+    @include abstracts.screen(md) {
+        gap: 16px;
+    }
+
+    &__img-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 76px;
+        height: 76px;
+        border-radius: 14px;
+        background: var(--checkout-gift-bg);
+    }
+
+    &__img {
+        width: 56px;
+        height: 56px;
+    }
 
     &__content {
         display: flex;
@@ -228,6 +319,10 @@
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 144.444%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
     }
 
     &__desc {
