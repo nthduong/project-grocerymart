@@ -411,14 +411,13 @@
 
     &__checkout-btn {
         width: 278px;
-        height: 60px;
+        height: 50px;
         font-size: 2.2rem;
         font-weight: 500;
         margin-left: auto;
 
         @include abstracts.screen(xl) {
             font-size: 1.8rem;
-            height: 50px;
             width: 200px;
         }
     }

@@ -1,0 +1,83 @@
+@use "../abstracts";
+
+.payment-card {
+    margin-top: 30px;
+    padding: 20px;
+    background: var(--payment-card-bg);
+    border-radius: 20px;
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    &__row-2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+        }
+    }
+
+    &__info {
+        margin-left: 0 !important;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+
+        @include abstracts.screen(md) {
+            font-size: 15px;
+            line-height: 146.667%;
+        }
+    }
+
+    &__link {
+        font-size: 1.5rem;
+        line-height: 146.667%;
+        font-weight: 500;
+        color: #0071dc;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__right {
+        gap: 14px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    &__value {
+        color: #9e9da8;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__desc {
+        margin-top: 4px;
+        font-size: 1.6rem;
+        line-height: 150%;
+
+        @include abstracts.screen(md) {
+            font-size: 14px;
+        }
+    }
+
+    &__img {
+        width: 70px;
+        height: 54px;
+        border-radius: 10px;
+        box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+    }
+}

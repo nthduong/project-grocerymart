@@ -41,6 +41,17 @@
         font-weight: 700;
         line-height: 141.667%;
 
+        &--lv2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 141.667%;
+
+            @include abstracts.screen(md) {
+                font-size: 1.6rem;
+                line-height: 150%;
+            }
+        }
+
         @include abstracts.screen(md) {
             font-size: 1.6rem;
             line-height: 150%;
@@ -79,6 +90,18 @@
             font-size: 1.8rem;
             font-weight: 500;
             line-height: 144.444%;
+        }
+
+        &-row {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include abstracts.screen(md) {
+                flex-direction: column;
+                gap: 16px;
+            }
         }
     }
 
@@ -302,6 +325,23 @@
     &__btn {
         display: flex;
     }
+
+    &__cta {
+        margin-top: 16px;
+        height: 50px;
+        padding: 0 40px;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 145.455%;
+
+        &-all {
+            margin-top: 0;
+
+            @include abstracts.screen(md) {
+                width: 100%;
+            }
+        }
+    }
 }
 
 .cart-separate {
@@ -481,6 +521,8 @@
 
     &__input {
         appearance: none;
+        display: flex;
+        align-self: flex-start;
         &::before {
             content: url("../icons/checkbox.svg");
         }
@@ -490,6 +532,9 @@
 
         &:checked::before {
             content: url("../icons/checkbox-checked.svg");
+        }
+        &:checked + .payment-card__value {
+            color: var(--text-color);
         }
     }
 }

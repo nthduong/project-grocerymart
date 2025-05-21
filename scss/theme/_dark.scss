@@ -95,6 +95,9 @@ html.dark {
     --shipping-separate: #292e39;
     --shipping-checkbox: brightness(0) saturate(100%) invert(89%) sepia(6%) saturate(128%) hue-rotate(191deg)
         brightness(84%) contrast(88%);
+
+    //payment-card
+    --payment-card-bg: #292e39;
     @include abstracts.screen(lg) {
         --header-shadow: rgba(0, 0, 0, 0.2);
     }

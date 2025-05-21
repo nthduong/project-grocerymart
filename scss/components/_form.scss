@@ -79,6 +79,8 @@ $error-color: #ed4337;
         align-items: center;
         height: 100px;
         padding: 12px;
+        border-radius: 10px;
+        border: 2px solid var(--auth-input-border-color);
         &-input {
             resize: none;
             flex: 1;
@@ -97,8 +99,6 @@ $error-color: #ed4337;
                 font-size: 1.6rem;
             }
         }
-        border-radius: 10px;
-        border: 2px solid var(--auth-input-border-color);
 
         &:focus-within {
             border-color: #1f85e6;
@@ -114,6 +114,11 @@ $error-color: #ed4337;
         line-height: 144.444%;
         &::placeholder {
             color: var(--auth-input-border-color);
+            @include abstracts.screen(md) {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 150%;
+            }
         }
 
         &-icon {
@@ -183,6 +188,21 @@ $error-color: #ed4337;
         font-size: 2.2rem;
         font-weight: 500;
         line-height: 145.455%;
+
+        &--medium {
+            display: block;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 144.444%;
+            margin-bottom: 20px;
+
+            @include abstracts.screen(md) {
+                margin-bottom: 10px;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 150%;
+            }
+        }
 
         &--small {
             display: block;

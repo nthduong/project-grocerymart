@@ -89,6 +89,9 @@ html {
     --shipping-checkbox: brightness(0) saturate(100%) invert(9%) sepia(27%) saturate(1105%) hue-rotate(210deg)
         brightness(97%) contrast(100%);
 
+    //payment-card
+    --payment-card-bg: #f6f6f6;
+
     @include abstracts.screen(md) {
         --checkout-detail-bg: #fafafd;
     }
