@@ -1,0 +1,9 @@
+.credit-card {
+    border-radius: 10px;
+    flex-shrink: 0;
+
+    &__top {
+        display: flex;
+        gap: 6px;
+    }
+}

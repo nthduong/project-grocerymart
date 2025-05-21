@@ -2469,6 +2469,15 @@ input:-webkit-autofill {
   box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
 }
 
+.credit-card {
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+.credit-card__top {
+  display: flex;
+  gap: 6px;
+}
+
 .top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
   display: flex;
   align-items: center;
@@ -3075,6 +3084,7 @@ html.dark {
   --shipping-checkbox: brightness(0) saturate(100%) invert(89%) sepia(6%) saturate(128%) hue-rotate(191deg)
       brightness(84%) contrast(88%);
   --payment-card-bg: #292e39;
+  --profile-bg: #292e38;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -3144,6 +3154,9 @@ html {
   --shipping-checkbox: brightness(0) saturate(100%) invert(9%) sepia(27%) saturate(1105%) hue-rotate(210deg)
       brightness(97%) contrast(100%);
   --payment-card-bg: #f6f6f6;
+  --profile-bg: #f6f6f6;
+  --profile-user-text: #fff;
+  --profile-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
 }
 @media (max-width: 767.98px) {
   html {
@@ -4221,6 +4234,75 @@ html {
 }
 .address-card__input:checked + .payment-card__value {
   color: var(--text-color);
+}
+
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  background: var(--profile-bg);
+  margin-bottom: 67px;
+}
+
+.profile__sidebar {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: var(--profile-shadow);
+  padding-bottom: 30px;
+}
+
+.profile-container {
+  margin-top: 30px;
+}
+
+.profile__user {
+  background: linear-gradient(180deg, rgba(26, 22, 46, 0) 0%, #1a162e 100%), url("../img/profile/bg-user.png") no-repeat center/cover;
+  border-radius: 20px 20px 0 0;
+  padding: 35px 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile__user-avatar {
+  width: 116px;
+  height: 116px;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  object-fit: cover;
+}
+.profile__user-name {
+  color: var(--profile-user-text);
+  margin-top: 15px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 144.444%;
+}
+.profile__user-desc {
+  color: var(--profile-user-text);
+  margin-top: 2px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+
+.profile__menu {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.profile__menu-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.profile__menu-list {
+  margin-top: 16px;
+}
+.profile__menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  font-size: 1.5rem;
+  line-height: 146.667%;
 }
 
 /*# sourceMappingURL=main.css.map */

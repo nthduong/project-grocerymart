@@ -98,6 +98,9 @@ html.dark {
 
     //payment-card
     --payment-card-bg: #292e39;
+
+    //profile
+    --profile-bg: #292e38;
     @include abstracts.screen(lg) {
         --header-shadow: rgba(0, 0, 0, 0.2);
     }
