@@ -101,6 +101,15 @@ html.dark {
 
     //profile
     --profile-bg: #292e38;
+    --profile-user-text: #fff;
+    --profile-shadow: 0px 20px 60px 10px rgba(23, 28, 40, 0.2);
+    --profile-info-bg: #171c28;
+
+    --item-info-bg: #292e39;
+
+    //credit
+    --credit-text: #fff;
+    --credit-card-new-color: #b9babe;
     @include abstracts.screen(lg) {
         --header-shadow: rgba(0, 0, 0, 0.2);
     }

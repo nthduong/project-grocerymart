@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Grocery Mart</title>
+        <title>Profile | Grocery Mart</title>
 
         <!-- favicon -->
         <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
@@ -38,8 +38,8 @@
                 </div>
 
                 <div class="profile-container">
-                    <div class="row">
-                        <div class="col-4">
+                    <div class="row gy-3">
+                        <div class="col-3 col-xl-4 col-lg-5 col-md-12">
                             <aside class="profile__sidebar">
                                 <div class="profile__user">
                                     <img src="./assets/img/avatar.jpg" alt="" class="profile__user-avatar" />
@@ -55,7 +55,7 @@
                                                 <img
                                                     src="./assets/icons/profile/icon1.svg"
                                                     alt=""
-                                                    class="profile__menu-icon"
+                                                    class="profile__menu-icon icon"
                                                 />
                                                 Personal info</a
                                             >
@@ -65,7 +65,7 @@
                                                 <img
                                                     src="./assets/icons/profile/icon2.svg"
                                                     alt=""
-                                                    class="profile__menu-icon"
+                                                    class="profile__menu-icon icon"
                                                 />
                                                 Addresses</a
                                             >
@@ -75,7 +75,7 @@
                                                 <img
                                                     src="./assets/icons/profile/icon3.svg"
                                                     alt=""
-                                                    class="profile__menu-icon"
+                                                    class="profile__menu-icon icon"
                                                 />
                                                 Communications & privacy
                                             </a>
@@ -91,7 +91,7 @@
                                                 <img
                                                     src="./assets/icons/profile/icon4.svg"
                                                     alt=""
-                                                    class="profile__menu-icon"
+                                                    class="profile__menu-icon icon"
                                                 />
                                                 Reorder</a
                                             >
@@ -101,7 +101,7 @@
                                                 <img
                                                     src="./assets/icons/profile/icon5.svg"
                                                     alt=""
-                                                    class="profile__menu-icon"
+                                                    class="profile__menu-icon icon"
                                                 />
                                                 Lists</a
                                             >
@@ -111,7 +111,7 @@
                                                 <img
                                                     src="./assets/icons/profile/icon6.svg"
                                                     alt=""
-                                                    class="profile__menu-icon"
+                                                    class="profile__menu-icon icon"
                                                 />
                                                 Registries
                                             </a>
@@ -127,7 +127,7 @@
                                                 <img
                                                     src="./assets/icons/profile/icon7.svg"
                                                     alt=""
-                                                    class="profile__menu-icon"
+                                                    class="profile__menu-icon icon"
                                                 />
                                                 Protection plans</a
                                             >
@@ -143,7 +143,7 @@
                                                 <img
                                                     src="./assets/icons/profile/icon7.svg"
                                                     alt=""
-                                                    class="profile__menu-icon"
+                                                    class="profile__menu-icon icon"
                                                 />
                                                 Help</a
                                             >
@@ -153,7 +153,7 @@
                                                 <img
                                                     src="./assets/icons/profile/icon8.svg"
                                                     alt=""
-                                                    class="profile__menu-icon"
+                                                    class="profile__menu-icon icon"
                                                 />
                                                 Terms of Use</a
                                             >
@@ -162,13 +162,188 @@
                                 </div>
                             </aside>
                         </div>
-                        <div class="col-8">
+                        <div class="col-9 col-xl-8 col-lg-6 col-md-12">
                             <div class="profile-info">
-                                <h2 class="profile-info__title">My Wallet</h2>
-                                <p class="profile-info__desc"></p>
-                                <div class="row">
-                                    <div class="col">
-                                        <article class="credit-card"></article>
+                                <div>
+                                    <h2 class="profile-info__title">My Wallet</h2>
+                                    <p class="profile-info__desc">Payment methods</p>
+                                    <div class="row row-cols-3 row-cols-xl-2 row-cols-lg-1 gy-3">
+                                        <!-- credit 1 -->
+                                        <div class="col">
+                                            <article class="credit-card" style="--credit-card-bg: #1e2e69">
+                                                <div class="credit-card__top">
+                                                    <img
+                                                        src="./assets/icons/plane.svg"
+                                                        alt=""
+                                                        class="credit-card__top-icon"
+                                                    />
+                                                    <h3 class="credit-card__top-title">FeatherCard</h3>
+                                                </div>
+                                                <span class="credit-card__num">1234 4567 8901 2221</span>
+                                                <div class="credit-card__bottom">
+                                                    <div class="credit-card__wrap">
+                                                        <span class="credit-card__label">Card Holder</span>
+                                                        <span class="credit-card__value">Imran Khan</span>
+                                                    </div>
+                                                    <div class="credit-card__wrap">
+                                                        <span class="credit-card__label">Expired</span>
+                                                        <span class="credit-card__value">10/22</span>
+                                                    </div>
+                                                    <img
+                                                        src="./assets/icons/oval.svg"
+                                                        alt=""
+                                                        class="credit-card__icon"
+                                                    />
+                                                </div>
+                                                <img
+                                                    src="./assets/icons/plane-large.svg"
+                                                    alt=""
+                                                    class="credit-card__img"
+                                                />
+                                            </article>
+                                        </div>
+                                        <!-- credit 2 -->
+                                        <div class="col">
+                                            <article class="credit-card" style="--credit-card-bg: #354151">
+                                                <div class="credit-card__top">
+                                                    <img
+                                                        src="./assets/icons/leaf.svg"
+                                                        alt=""
+                                                        class="credit-card__top-icon"
+                                                    />
+                                                    <h3 class="credit-card__top-title">FeatherCard</h3>
+                                                </div>
+                                                <span class="credit-card__num">1234 4567 8901 2221</span>
+                                                <div class="credit-card__bottom">
+                                                    <div class="credit-card__wrap">
+                                                        <span class="credit-card__label">Card Holder</span>
+                                                        <span class="credit-card__value">Imran Khan</span>
+                                                    </div>
+                                                    <div class="credit-card__wrap">
+                                                        <span class="credit-card__label">Expired</span>
+                                                        <span class="credit-card__value">11/22</span>
+                                                    </div>
+                                                    <img
+                                                        src="./assets/icons/oval.svg"
+                                                        alt=""
+                                                        class="credit-card__icon"
+                                                    />
+                                                </div>
+                                                <img
+                                                    src="./assets/icons/left-large.svg"
+                                                    alt=""
+                                                    class="credit-card__img"
+                                                />
+                                            </article>
+                                        </div>
+
+                                        <div class="col">
+                                            <a href="#!" class="credit-card-new">
+                                                <div class="credit-card-new__wrap">
+                                                    <img src="./assets/icons/plus.svg" alt="" class="icon" />
+                                                    <span class="credit-card-new__title">Add New Card</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h2 class="profile-info__title">Account info</h2>
+                                    <p class="profile-info__desc">Addresses, contact information and password</p>
+                                    <div class="row row-cols-2 row-cols-lg-1 gy-2 gx-2">
+                                        <!-- item1 -->
+                                        <div class="col">
+                                            <div class="item-info">
+                                                <div class="item-info__icon-wrap">
+                                                    <img
+                                                        src="./assets/icons/profile/icon3.svg"
+                                                        alt=""
+                                                        class="item-info__icon icon"
+                                                    />
+                                                </div>
+                                                <div class="item-info__content">
+                                                    <div class="item-info__title">Email Address</div>
+                                                    <div class="item-info__desc">tarek97.ta@gmail.com</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- item2 -->
+                                        <div class="col">
+                                            <div class="item-info">
+                                                <div class="item-info__icon-wrap">
+                                                    <img
+                                                        src="./assets/icons/call.svg"
+                                                        alt=""
+                                                        class="item-info__icon icon"
+                                                    />
+                                                </div>
+                                                <div class="item-info__content">
+                                                    <div class="item-info__title">Phone number</div>
+                                                    <div class="item-info__desc">+000 11122 2345 657</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- item3 -->
+                                        <div class="col">
+                                            <div class="item-info">
+                                                <div class="item-info__icon-wrap">
+                                                    <img
+                                                        src="./assets/icons/profile/icon2.svg"
+                                                        alt=""
+                                                        class="item-info__icon icon"
+                                                    />
+                                                </div>
+                                                <div class="item-info__content">
+                                                    <div class="item-info__title">Add an address</div>
+                                                    <div class="item-info__desc">
+                                                        Bangladesh Embassy, Washington, DC 20008
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h2 class="profile-info__title">Lists</h2>
+                                    <p class="profile-info__desc">2 items - Primary</p>
+                                    <div class="pf-cart__list">
+                                        <div class="pf-cart-item">
+                                            <div class="pf-cart-item__img-wrap">
+                                                <img
+                                                    src="./assets/img/product/item-1.png"
+                                                    alt=""
+                                                    class="pf-cart-item__img"
+                                                />
+                                            </div>
+                                            <div class="pf-cart-item__content">
+                                                <h3 class="pf-cart-item__title">
+                                                    Coffee Beans - Espresso Arabica and Robusta Beans
+                                                </h3>
+                                                <div class="pf-cart-item__wrap">
+                                                    <span class="pf-cart-item__price">$47.00</span>
+                                                    <button class="pf-cart-item__btn btn">Add to cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pf-cart__separate"></div>
+                                        <div class="pf-cart-item">
+                                            <div class="pf-cart-item__img-wrap">
+                                                <img
+                                                    src="./assets/img/product/item-2.png"
+                                                    alt=""
+                                                    class="pf-cart-item__img"
+                                                />
+                                            </div>
+                                            <div class="pf-cart-item__content">
+                                                <h3 class="pf-cart-item__title">
+                                                    Lavazza Coffee Blends - Try the Italian Espresso
+                                                </h3>
+                                                <div class="pf-cart-item__wrap">
+                                                    <span class="pf-cart-item__price">$53.00</span>
+                                                    <button class="pf-cart-item__btn btn">Add to cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

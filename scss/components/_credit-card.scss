@@ -1,9 +1,102 @@
 .credit-card {
     border-radius: 10px;
     flex-shrink: 0;
+    z-index: 0;
+    padding: 20px;
+    position: relative;
+    background: var(--credit-card-bg);
+    overflow: hidden;
+    user-select: none;
 
     &__top {
         display: flex;
+        align-items: center;
         gap: 6px;
+
+        &-title {
+            color: var(--credit-text);
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 142.857%;
+        }
+    }
+
+    &__num {
+        color: var(--credit-text);
+
+        display: block;
+        margin-top: 37px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__bottom {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+
+        + .credit-card__wrap {
+            margin-left: 40px;
+        }
+    }
+
+    &__label {
+        color: var(--credit-text);
+
+        font-size: 0.8rem;
+        font-weight: 500;
+        line-height: 175%;
+    }
+
+    &__value {
+        color: var(--credit-text);
+
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 140%;
+    }
+
+    &__icon {
+        margin-left: auto;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+}
+
+.credit-card-new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 170px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    border: 1px dashed var(--credit-card-new-color);
+
+    &__wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        user-select: none;
+        gap: 14px;
+    }
+
+    &__title {
+        color: var(--credit-card-new-color);
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 142.857%;
     }
 }
